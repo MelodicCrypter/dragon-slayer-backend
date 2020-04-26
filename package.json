@@ -1,0 +1,45 @@
+{
+  "name": "clean-rest-api",
+  "version": "1.0.0",
+  "main": "build/server.js",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build src -s",
+    "dev": "nodemon --exec babel-node src/server.js",
+    "build": "yarn clean && yarn build-babel",
+    "start": "yarn build && node ./build/server.js"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/runtime": "^7.8.4",
+    "@hapi/joi": "^17.1.0",
+    "bcrypt": "^3.0.8",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "hpp": "^0.2.3",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.9.1",
+    "nodemailer": "^6.4.3",
+    "nodemon": "^2.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/node": "^7.8.4",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1"
+  }
+}
