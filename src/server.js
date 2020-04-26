@@ -25,7 +25,7 @@ const port = process.env.PORT || 9000;
 
 // Middlewares: Security
 // Consider CSP and SRI for more security features
-app.use(cors({ origin: ['http://localhost:7009', /\.netlify\.com$/] })); // Cross-Origin
+app.use(cors({ origin: ['http://localhost:7009', /\.netlify\.app$/] })); // Cross-Origin
 app.use(helmet()); // Security for HTTP requests
 app.use(compression({ filter: shouldCompress, threshold: 0 })); // Compresses response
 app.use(express.json({ limit: '300kb' })); // Allows JSON but with limit
